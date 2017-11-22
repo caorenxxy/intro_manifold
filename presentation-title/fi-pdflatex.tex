@@ -33,6 +33,7 @@
 \usepackage{amsmath, amssymb}
 \usepackage{url}       % `\url`s
 \usepackage{listings}  % Code listings
+\newcommand{\bol}[1]{\textbf{#1}}
 \frenchspacing
 \begin{document}
   \frame{\maketitle}
@@ -45,24 +46,143 @@
 
   \begin{darkframes}
     \section{Manifold}
-    \subsection{Blind Text}
-    \begin{frame}{Manifold}
-      'Twas brillig, and the slithy toves\\
-      Did gyre and gimble in the wabe;\\
-      All mimsy were the borogoves,\\
-      And the mome raths outgrabe.\\\bigskip
-
-      “Beware the Jabberwock, my son!\\
-      The jaws that bite, the claws that catch!\\
-      Beware the Jubjub bird, and shun\\
-      The frumious Bandersnatch!”\\
+    
+    \begin{frame}{Manifold Learning}
+    \begin{itemize}
+    	\item The data space may not be a Euclidean space, but a nonlinear manifold
+    	\item Unfold a manifold, and preserve the geometry structure.
+    	\item Euclidean distance $\Longrightarrow$ geodesic distance
+    \end{itemize}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.2]{./figs/fig1.eps}
+	\end{figure}
     \end{frame}
 
-    \begin{frame}[label=lists]{Lists and locales}
- 
+    \begin{frame}{Manifold Learning}
+    Find a Euclidean embedding, and then perform traditional learning algorithms in the Euclidean space.
+	\begin{block}{Definition of Manifold Learning}
+	Given data points $\bol{x}_1, \ldots, \bol{x}_m \in \mathcal{M} \subset \mathbb{R}^n$, try to find a map $f : \mathcal{M} \to \mathbb{R}^d, d\ll n$, where $f = (f_1, \ldots, f_n), f_i : \mathcal{M} \to \mathbb{R}$
+	\end{block}
+ 	\begin{itemize}
+ 		\item The manifold is unknown! We have only samples!
+		\item How to compute the distance on $\mathcal{M}$?
+		\item How to find the mapping function $f$
+ 	\end{itemize}
     \end{frame}
 
-    \subsection{Structuring Elements}
+	\begin{frame}{Manifold of Face Images}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.28]{./figs/fig4.eps}
+	\end{figure}
+	
+	\end{frame}
+	
+	\begin{frame}{Manifold of Handwritten Digits}
+	\begin{figure}
+	\centering
+	\includegraphics[scale=0.26]{./figs/fig5.eps}
+	\end{figure}
+	
+	\end{frame}	
+	
+    \section{Manifold based Dimensionality Reduction}
+    \begin{frame}{PCA: Traditional Dimensionality Reduction Method}
+    Principal Component Analysis using linear projection to project data to some directions which have maximum variances
+  	\begin{eqnarray*}
+  		\bol{p}_{opt} & = & \arg\max_{\bol{p}}\sum_{i = 1}^m(y_i - \bar{y})^2\\
+  							& = & \arg\max_{\bol{p}}\bol{p}^TC\bol{p}\\
+  							&    &  s.t. \bol{p}^T\bol{p} = 1
+  	\end{eqnarray*}
+  	\begin{itemize}
+  		\item If the manifold is linear, PCA can find the optimal result
+  		\item PCA can not process nonlinear manifold
+  	\end{itemize}
+    \end{frame}
+    
+    \begin{frame}{MDS and ISOMAP}
+    \alert{Multidimensional scaling} tries to preserve the Euclidean distances
+    \begin{displaymath}
+	\Delta :=
+	\left( \begin{array}{cccc}
+	\delta_{1,1} & \delta_{1,2} & \ldots & \delta_{1,m} \\
+	\delta_{2,1} & \delta_{2,2} & \ldots & \delta_{2,m}\\
+	\vdots & \vdots & &\vdots\\
+	\delta_{m,1} & \delta_{m,2} &\ldots & \delta{m,m}\\
+	\end{array} \right)
+   \end{displaymath}
+   The $\delta$ is the Euclidean distance of every two points $ \delta_{ij}=\Vert \textbf{x}_i - \textbf{x}_j \Vert$ 
+   \[
+     \min_{\textbf{y}_1,\ldots,\textbf{y}_m} \sum_{i<j}\left(\Vert \textbf{y}_i - \textbf{y}_j \Vert - 
+     \delta_{i,j}\right)^2,\quad \textrm{dim}(\textbf{y}_i) \ll \textrm{dim}(\textbf{x}_i)
+   \]
+    \end{frame}
+   
+   
+   
+    \begin{frame}{MDS and ISOMAP}
+     \alert{ISOMAP} tries to keep the geodesic distances instead of the Euclidean distances.
+    \begin{itemize}
+    	\item How to evaluate the geodesic distances with limited samples?
+    	\item Construct the adjacency Graph, and calculate the shortest distances (Dijstra or Floyd algorithm)
+    \end{itemize}
+   	
+   	\begin{figure}
+   	\centering
+   	\includegraphics[scale=0.2]{./figs/fig6.eps}
+   	\end{figure}
+	   
+    \end{frame}
+    
+    \begin{frame}{Local Linear Embedding}
+    \alert{Local Linear Embedding}(2000 Science) is another famous manifold learning method. It tries to preserve the local linear relationship.
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{./figs/fig7.eps}
+    \end{figure}
+    \vspace{-5mm}
+     \begin{eqnarray*}
+    	\min\epsilon(W) & = & \min\sum_i\Vert \bol{x}_i - \sum_jW_{ij}\bol{x}_j \Vert \\
+    							 &     & s.t. \sum_j W_{ij} = 1
+    \end{eqnarray*}
+    \end{frame}
+    
+    \begin{frame}{Local Linear Embedding}
+    \alert{Local Linear Embedding}(2000 Science) is another famous manifold learning method. It tries to preserve the local linear relationship.
+    \begin{figure}
+    \centering
+    \includegraphics[scale=0.15]{./figs/fig8.eps}
+    \end{figure}
+	\begin{displaymath}
+	\min\Phi(\bol{y}) = \min\sum_i\Vert \bol{y}_i - \sum_jW_{ij}\bol{y}_j  \Vert^2
+	\end{displaymath}
+    \end{frame}
+    
+    \begin{frame}{Laplace Eigen Map}
+    In Laplace Eigen Map, a conclusion has been proofed: \\
+    \begin{displaymath}
+    	\vert f(\bol{z} ) - f(\bol{x})\vert < \Vert \nabla f(\bol{x}) \Vert\cdot \Vert \bol{z} - \bol{x} \Vert + o(\Vert \bol{z} - \bol{x} \Vert)
+    \end{displaymath}
+    \begin{itemize}
+    \item If $\bol{x}_i$ and $\bol{x}_j$ are close to each other and the gradient of map $f$ is small, we can sure that $f(\bol{x}_i)$ and $f(\bol{x}_j)$ preserve local structure.
+    \end{itemize}
+    Construct Laplace matrix and get object function
+    \begin{displaymath}
+    	L\bol{y} = \lambda\bol{y}
+    \end{displaymath}
+    \end{frame}
+    
+	\begin{frame}{Global vs Local}
+	\begin{itemize}
+		\item Global method : ISOMAP
+		\item Local method : LLE, LE
+		\item Global method can keep more informations of data
+		\item But the amount of computation of Global methods is huge
+	\end{itemize}
+	\end{frame}	    
+    
+    
     \begin{frame}[label=simmonshall]{Text blocks}
       \framesubtitle{In plain, example, and \alert{alert} flavour}
       \alert{This text} is highlighted.
