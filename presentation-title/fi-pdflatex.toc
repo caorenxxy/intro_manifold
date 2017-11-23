@@ -1,7 +1,10 @@
 \select@language {english}
 \beamer@sectionintoc {1}{Manifold}{2}{0}{1}
 \beamer@sectionintoc {2}{Manifold based Dimensionality Reduction}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Numerals and Mathematics}{17}{0}{2}
-\beamer@subsectionintoc {2}{2}{Figures and Code Listings}{18}{0}{2}
-\beamer@subsectionintoc {2}{3}{Citations and Bibliography}{21}{0}{2}
-\beamer@subsectionintoc {2}{4}{Citations and Bibliography}{23}{0}{2}
+\beamer@subsectionintoc {2}{1}{PCA}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{MDS}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{ISOMAP}{10}{0}{2}
+\beamer@subsectionintoc {2}{4}{LLE}{11}{0}{2}
+\beamer@subsectionintoc {2}{5}{LE}{13}{0}{2}
+\beamer@subsectionintoc {2}{6}{Vector Field based Dimensionality Reduction}{17}{0}{2}
+\beamer@subsectionintoc {2}{7}{Manifold Regularization : Semi-Supervised Setting}{18}{0}{2}
