@@ -64,7 +64,7 @@
     \begin{frame}{Manifold Learning}
     Find a Euclidean embedding, and then perform traditional learning algorithms in the Euclidean space.
 	\begin{block}{Definition of Manifold Learning}
-	Given data points $\bol{x}_1, \ldots, \bol{x}_m \in \mathcal{M} \subset \mathbb{R}^n$, try to find a map $f : \mathcal{M} \to \mathbb{R}^d, d\ll n$, where $f = (f_1, \ldots, f_n), f_i : \mathcal{M} \to \mathbb{R}$
+	Given data points $\bol{x}_1, \ldots, \bol{x}_m \in \mathcal{M} \subset \mathbb{R}^n$, try to find a map $f : \mathcal{M} \to \mathbb{R}^d, d\ll n$, where $f = (f_1, \ldots, f_d), f_i : \mathcal{M} \to \mathbb{R}$
 	\end{block}
  	\begin{itemize}
  		\item The manifold is unknown! We have only samples!
@@ -194,9 +194,9 @@
     
 	\begin{frame}{Global vs Local}
 	\begin{itemize}
-		\item Global method : ISOMAP
-		\item Local method : LLE, LE
-		\item Global method can keep more informations of data
+		\item Global method : ISOMAP\\
+		\item Local method : LLE, LE\\
+		\item Global method can keep more informations of data\\
 		\item But the amount of computation of Global methods is huge
 	\end{itemize}
 	\end{frame}	    
@@ -213,8 +213,72 @@
     
    \subsection{Vector Field based Dimensionality Reduction}
    \begin{frame}{Vector Field based Dimensionality Reduction}
-   
+   \framesubtitle{Parallel Vector Field Embedding}
+   The goal to find a map $F=(f_1,\ldots,f_d) : \mathcal{M} \subset \mathbb{R}^n \to \mathbb{R}^d$
+   \begin{itemize}
+   	\item $F$ is a local isometry
+   	\item $dF$ is orthonormal
+   	\item $df_i$ is parallel vector fields $\Rightarrow$ $\nabla df_i = 0$
+   \end{itemize}
+   Steps:
+   \begin{enumerate}
+   	\item $\displaystyle E(V) = \int_{\mathcal{M}}\Vert \nabla V \Vert^2dx,\quad  s.t. \int_{\mathcal{M}}\Vert V \Vert^2=1$
+   	\item $\displaystyle\min\Phi(f) = \int_{\mathcal{M}}\Vert \nabla f - V \Vert^2dx$
+   \end{enumerate}
+   \alert{A new perspective for manifold learning}
 	\end{frame}      
+   
+   \begin{frame}{Swiss Roll}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/swiss.eps}
+   \caption{Swiss Roll}
+   \end{figure}
+   \end{frame}
+   
+   
+   \begin{frame}{PFE}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/pfe.eps}
+   \caption{PFE}
+   \end{figure}
+   \end{frame}
+   
+   
+   \begin{frame}{PCA}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/pca.eps}
+   \caption{PCA}
+   \end{figure}
+   \end{frame}
+   
+   \begin{frame}{ISOMAP}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/isomap.eps}
+   \caption{ISOMAP}
+   \end{figure}
+   \end{frame}   
+   
+   \begin{frame}{LLE}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/lle.eps}
+   \caption{LLE}
+   \end{figure}
+   \end{frame}
+   
+   
+   \begin{frame}{LE}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/le.eps}
+   \caption{LE}
+   \end{figure}
+   \end{frame}
+   
    
    \subsection{Manifold Regularization : Semi-Supervised Setting}
    \begin{frame}{Manifold Regularization}
@@ -246,8 +310,10 @@
   \item $Z=(\bol{z}_1,\ldots,\bol{z}_k)$ : labeled points
   \item $X=(\bol{x}_1, \ldots, \bol{x}_m)$: all points
   \end{itemize}
-  
   \end{frame}
-    
+  
+    \begin{frame}
+		\centering\Huge{Thanks !}
+	\end{frame}	  
     \end{darkframes}
 \end{document}

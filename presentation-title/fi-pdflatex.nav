@@ -44,13 +44,27 @@
 \headcommand {\beamer@subsectionentry {0}{2}{6}{17}{Vector Field based Dimensionality Reduction}}\headcommand {\beamer@subsectionpages {13}{16}}
 \headcommand {\slideentry {2}{6}{1}{17/17}{Vector Field based Dimensionality Reduction}{0}}
 \headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@subsectionentry {0}{2}{7}{18}{Manifold Regularization : Semi-Supervised Setting}}\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\slideentry {2}{7}{1}{18/18}{Manifold Regularization : Semi-Supervised Setting}{0}}
+\headcommand {\slideentry {2}{6}{2}{18/18}{Vector Field based Dimensionality Reduction}{0}}
 \headcommand {\beamer@framepages {18}{18}}
-\headcommand {\slideentry {2}{7}{2}{19/19}{Manifold Regularization : Semi-Supervised Setting}{0}}
+\headcommand {\slideentry {2}{6}{3}{19/19}{Vector Field based Dimensionality Reduction}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {1}{19}}
-\headcommand {\beamer@sectionpages {1}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\def \inserttotalframenumber {18}}
+\headcommand {\slideentry {2}{6}{4}{20/20}{Vector Field based Dimensionality Reduction}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {2}{6}{5}{21/21}{Vector Field based Dimensionality Reduction}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {2}{6}{6}{22/22}{Vector Field based Dimensionality Reduction}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {2}{6}{7}{23/23}{Vector Field based Dimensionality Reduction}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{2}{7}{24}{Manifold Regularization : Semi-Supervised Setting}}\headcommand {\beamer@subsectionpages {17}{23}}
+\headcommand {\slideentry {2}{7}{1}{24/24}{Manifold Regularization : Semi-Supervised Setting}{0}}
+\headcommand {\beamer@framepages {24}{24}}
+\headcommand {\slideentry {2}{7}{2}{25/25}{Manifold Regularization : Semi-Supervised Setting}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\slideentry {2}{7}{3}{26/26}{Manifold Regularization : Semi-Supervised Setting}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\beamer@partpages {1}{26}}
+\headcommand {\beamer@subsectionpages {1}{26}}
+\headcommand {\beamer@sectionpages {1}{26}}
+\headcommand {\beamer@documentpages {26}}
+\headcommand {\def \inserttotalframenumber {25}}
