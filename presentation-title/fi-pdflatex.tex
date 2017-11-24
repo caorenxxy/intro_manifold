@@ -90,7 +90,7 @@
 	\end{frame}	
 	
     \section{Manifold based Dimensionality Reduction}
-    \subsection{PCA}
+    \subsection{Principal Component Analysis}
     \begin{frame}{PCA: Traditional Dimensionality Reduction Method}
     Principal Component Analysis using linear projection to project data to some directions which have maximum variances
   	\begin{eqnarray*}
@@ -104,7 +104,7 @@
   	\end{itemize}
     \end{frame}
     
-    \subsection{MDS}
+    \subsection{Multidimensional scaling}
     \begin{frame}{MDS and ISOMAP}
     \alert{Multidimensional scaling} tries to preserve the Euclidean distances
     \begin{displaymath}
@@ -138,7 +138,7 @@
    	\end{figure}
     \end{frame}
     
-    \subsection{LLE}
+    \subsection{Local Linear Embedding}
     \begin{frame}{Local Linear Embedding}
     \alert{Local Linear Embedding}(2000 Science) is another famous manifold learning method. It tries to preserve the local linear relationship.
     \begin{figure}
@@ -164,9 +164,9 @@
     \end{frame}
     
     
-    \subsection{LE}
-    \begin{frame}{Laplace Eigen Map}
-    In Laplace Eigen Map, a conclusion has been proofed: \\
+    \subsection{Laplacian Eigenmaps}
+    \begin{frame}{Laplacian Eigenmaps}
+    In Laplacian Eigenmaps, a conclusion has been proofed: \\
     \begin{displaymath}
     	\vert f(\bol{z} ) - f(\bol{x})\vert < \Vert \nabla f(\bol{x}) \Vert\cdot \Vert \bol{z} - \bol{x} \Vert + o(\Vert \bol{z} - \bol{x} \Vert)
     \end{displaymath}
@@ -265,7 +265,7 @@
    \begin{frame}{LLE}
    \begin{figure}
    \centering
-   \includegraphics[scale=0.5]{./figs/lle.eps}
+   \includegraphics[scale=0.5]{./figs/lle2.eps}
    \caption{LLE}
    \end{figure}
    \end{frame}
@@ -274,13 +274,28 @@
    \begin{frame}{LE}
    \begin{figure}
    \centering
-   \includegraphics[scale=0.5]{./figs/le.eps}
+   \includegraphics[scale=0.4]{./figs/LE.eps}
    \caption{LE}
    \end{figure}
    \end{frame}
    
+   \begin{frame}{NPE}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/lle1.eps}
+   \caption{NPE}
+   \end{figure}
+   \end{frame}
    
-   \subsection{Manifold Regularization : Semi-Supervised Setting}
+   \begin{frame}{LPP}
+   \begin{figure}
+   \centering
+   \includegraphics[scale=0.5]{./figs/le1.eps}
+   \caption{LPP}
+   \end{figure}
+   \end{frame}
+   
+   \section{Manifold Regularization : Semi-Supervised Setting}
    \begin{frame}{Manifold Regularization}
    \begin{itemize}
    	\item \alert{Measured (labeled)} points: discriminant structure\\
