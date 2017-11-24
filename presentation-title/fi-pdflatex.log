@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.26)  24 NOV 2017 12:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2017.9.26)  24 NOV 2017 13:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2278,7 +2278,7 @@ Package pdftex.def Info: ./figs/le1-eps-converted-to.pdf used on input line 298
 
 ]
 LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 362.
+(Font)              scaled to size 24.88pt on input line 370.
  [31
 
 ]
@@ -2291,20 +2291,20 @@ LaTeX Font Info:    Font shape `T1/Carlito-LF/m/n' will be
 \tf@snm=\write8
 \openout8 = `fi-pdflatex.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
  (./fi-pdflatex.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 372.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
 Package rerunfilecheck Info: File `fi-pdflatex.out' has not changed.
 (rerunfilecheck)             Checksum: 96C19A5FAFE7881C280E48F8946B23AD;692.
  ) 
 Here is how much of TeX's memory you used:
- 31169 strings out of 492995
- 588891 string characters out of 6136402
+ 31172 strings out of 492995
+ 588945 string characters out of 6136402
  697259 words of memory out of 5000000
  33803 multiletter control sequences out of 15000+600000
- 215010 words of font info for 146 fonts, out of 8000000 for 9000
+ 215486 words of font info for 148 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,16n,76p,810b,1373s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2017/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}{c:/texlive/2017
@@ -2321,7 +2321,7 @@ iwonar.pfb><c:/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texl
 ive/2017/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb><c:/texliv
 e/2017/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb><c:/texlive/
 2017/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on fi-pdflatex.pdf (31 pages, 1601120 bytes).
+Output written on fi-pdflatex.pdf (31 pages, 1601311 bytes).
 PDF statistics:
  388 PDF objects out of 1000 (max. 8388607)
  300 compressed objects within 3 object streams
