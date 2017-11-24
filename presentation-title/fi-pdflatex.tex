@@ -175,7 +175,7 @@
     \end{itemize}
     Construct Laplace matrix and get object function
     \begin{displaymath}
-    	\min\sum_{i,j}(y_i - y_j)^2W_{ij} \Rightarrow L\bol{y} = \lambda D\bol{y}
+    	\min_{\Vert f \Vert_{L^2(\mathcal{M})} = 1}\int_{\mathcal{M}}\Vert\nabla f(\bol{x})\Vert^2 \Rightarrow\min\sum_{i,j}(y_i - y_j)^2W_{ij} \Rightarrow L\bol{y} = \lambda D\bol{y}
     \end{displaymath}
     \end{frame}
     
@@ -197,16 +197,18 @@
 		\item Global method : ISOMAP\\
 		\item Local method : LLE, LE\\
 		\item Global method can keep more informations of data\\
-		\item But the amount of computation of Global methods is huge
+		\item But large amount of computation
 	\end{itemize}
 	\end{frame}	    
     
     \begin{frame}{Out of sample problem}
     \begin{itemize}
-    	\item LE and LLE can not applied new samples. 
+    	\item LE and LLE can not applied on new samples. 
     	\item Use linear projection: $y = \bol{p}^T\bol{x}$
-    	\item LE$\rightarrow$ LPP : $XLX^T\bol{p} = \lambda D\bol{p}$
-    	\item LLE$\rightarrow$ NPE : $XMX^T\bol{p} = \lambda XX^T\bol{p}$
+    	\item LE$\Rightarrow$ LPP : $XLX^T\bol{p} = \lambda XDX^T\bol{p}$
+    	\item LLE$\Rightarrow$ NPE : $XMX^T\bol{p} = \lambda XX^T\bol{p}$
+    	\item Projection Matrix $P = [\bol{p}_1, \ldots, \bol{p}_d]$
+    	\item Given a new sample $\bol{y}$, we can project it to low-dim space $\bol{z} = P^T\bol{y}$
     \end{itemize}
     
     \end{frame}
@@ -320,15 +322,28 @@
   \end{displaymath}
   \item Solution
   \begin{displaymath}
-  	\bol{w} = \left(  ZZ^T + \lambda_1XLX^T + \lambda_2I  \right)^{-1}Z\bol{y}
+  	\widehat{\bol{w}} = \left(  ZZ^T + \lambda_1XLX^T + \lambda_2I  \right)^{-1}Z\bol{y}
   \end{displaymath}
   \item $Z=(\bol{z}_1,\ldots,\bol{z}_k)$ : labeled points
   \item $X=(\bol{x}_1, \ldots, \bol{x}_m)$: all points
   \end{itemize}
   \end{frame}
-  
+  \begin{frame}{Resources}
+  Conference:
+  \begin{itemize}
+  	\item Computer Vision: CVPR, ICCV, ECCV
+  	\item Machine Learning: NIPS, ICML, IJCAI, AAAI
+  	\item NLP : ACL
+  \end{itemize}
+  Tools:
+  \begin{itemize}
+  	\item Scikit-learn: http://scikit-learn.org/
+  	\item OpenCV: https://opencv.org/
+  \end{itemize}
+  \end{frame}
     \begin{frame}
-		\centering\Huge{Thanks !}
+		\centering\Huge{Thanks !}\\
+		\centering\Huge{Q\&A}
 	\end{frame}	  
     \end{darkframes}
 \end{document}
