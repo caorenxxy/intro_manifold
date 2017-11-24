@@ -328,6 +328,21 @@
   \item $X=(\bol{x}_1, \ldots, \bol{x}_m)$: all points
   \end{itemize}
   \end{frame}
+  
+  \begin{frame}{Parallel Field Regularization}
+  \begin{displaymath}
+  	\arg\min_{f,V} E(f, V) = \frac{1}{m}\sum_{i=1}^m R_0(\bol{x}_i, y_i, f) + \lambda_1 R_1(f,V) + \lambda_2 R_2(V)
+  \end{displaymath}
+  Where
+  \begin{itemize}
+  	\item $\displaystyle R_1(f,V) = \int_{M}\Vert \nabla f - V \Vert^2$, \qquad $\displaystyle R_2(V) = \int_{M}\Vert \nabla V \Vert^2$
+  	\item Low cost of estimation.
+  	\item Insensitive to noise.
+  \end{itemize}
+  \end{frame}
+  
+  
+  
   \begin{frame}{Resources}
   Conference:
   \begin{itemize}
